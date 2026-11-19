@@ -1,0 +1,48 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>Registro</h2>
+    <p class="subtitle">Ingresa tus datos para registrate</p>
+
+    <form [formGroup]="formRegister" (ngSubmit)="Registrarse()">
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input formControlName="email" type="email"
+          
+          id="email" 
+          name="email" 
+          placeholder="tu@correo.com" 
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input 
+          type="password" 
+          id="password" 
+          formControlName="password" 
+          name="password" 
+          placeholder="••••••••" 
+          required
+        >
+      </div>    
+
+      <div class="form-group">
+        <label for="repassword">Confirme su contraseña</label>
+        <input 
+          type="password" 
+          id="repassword" 
+          formControlName="repassword" 
+          name="repassword" 
+          placeholder="••••••••" 
+          required
+        >
+      </div>
+
+      <div class="form-actions">
+      </div>
+      <button type="submit" class="btn-submit">Registrase</button>
+      
+    </form>
+  </div>
+</div>
